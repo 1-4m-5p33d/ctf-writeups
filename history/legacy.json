@@ -1,0 +1,379 @@
+{
+  "entries": {
+    "MISC/AdventofCyber2025/AdventofCyber2025.md::advent of cyber 2025::0": {
+      "updatedAt": "2025-12-31T12:26:31.000Z",
+      "repository": "phase2",
+      "sourcePath": "AdventofCyber2025/writeups.md"
+    },
+    "MISC/Forensics/CSAW_Camera.md::csaw 2024 qualifiers i like my camera raw::0": {
+      "updatedAt": "2025-12-30T15:49:00.000Z",
+      "repository": "phase2",
+      "sourcePath": "forensics_custom/steganography/CSAW_Camera.md"
+    },
+    "MISC/Forensics/CSAW_Echo.md::csaw 2024 qualifiers is there an echo::0": {
+      "updatedAt": "2025-12-29T21:16:18.000Z",
+      "repository": "phase2",
+      "sourcePath": "forensics_custom/steganography/CSAW_Echo.md"
+    },
+    "MISC/Forensics/CSAW_zipzipzip.md::csaw 2024 qualifiers zipzipzip::0": {
+      "updatedAt": "2025-12-26T10:44:20.000Z",
+      "repository": "phase2",
+      "sourcePath": "forensics_custom/steganography/CSAW_zipzipzip.md"
+    },
+    "MISC/Forensics/Forensics.md::hide and seek::0": {
+      "updatedAt": "2025-12-02T10:31:58.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/Forensics.md"
+    },
+    "MISC/Forensics/Forensics.md::nutrela chunks::0": {
+      "updatedAt": "2025-12-02T10:31:58.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/Forensics.md"
+    },
+    "MISC/Forensics/Forensics.md::rar of the abyss::0": {
+      "updatedAt": "2025-12-04T12:22:10.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/Forensics.md"
+    },
+    "MISC/Forensics/Forensics.md::ninetails::0": {
+      "updatedAt": "2025-12-04T21:38:23.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/Forensics.md"
+    },
+    "MISC/Forensics/Forensics.md::re draw::0": {
+      "updatedAt": "2025-12-04T21:38:23.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/Forensics.md"
+    },
+    "MISC/Forensics/IronCTF_Uncrackable.md::ironctf 2024 uncrackable zip::0": {
+      "updatedAt": "2025-12-30T18:05:37.000Z",
+      "repository": "phase2",
+      "sourcePath": "forensics_custom/steganography/IronCTF_Uncrackable.md"
+    },
+    "MISC/Forensics/forensics.md::trivial flag transfer protocol::0": {
+      "updatedAt": "2026-09-12T21:34:47.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/forensics.md"
+    },
+    "MISC/Forensics/forensics.md::tunn3l v1s10n::0": {
+      "updatedAt": "2026-09-13T12:25:29.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/forensics.md"
+    },
+    "MISC/Forensics/forensics.md::file types::0": {
+      "updatedAt": "2026-09-13T13:04:46.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/forensics.md"
+    },
+    "MISC/Forensics/forensics.md::custom challenge::0": {
+      "updatedAt": "2026-09-13T13:40:09.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/forensics.md"
+    },
+    "MISC/Forensics/nopsctf-hid.pcapng.md::n0ps ctf 2024 hid::0": {
+      "updatedAt": "2025-12-30T20:26:23.000Z",
+      "repository": "phase2",
+      "sourcePath": "forensics_custom/steganography/nopsctf-hid.pcapng.md"
+    },
+    "MISC/Forensics/the_triple_illusion.md::the triple illusion::0": {
+      "updatedAt": "2025-12-27T22:27:32.000Z",
+      "repository": "phase2",
+      "sourcePath": "forensics_custom/steganography/the_triple_illusion.md"
+    },
+    "MISC/Forensics/tuctf_bunker.md::tuctf bunker::0": {
+      "updatedAt": "2025-12-30T19:29:21.000Z",
+      "repository": "phase2",
+      "sourcePath": "forensics_custom/steganography/tuctf_bunker.md"
+    },
+    "MISC/Forensics/wanictf_tiny10px.md::wanictf 2024 tiny10px::0": {
+      "updatedAt": "2025-12-30T20:57:51.000Z",
+      "repository": "phase2",
+      "sourcePath": "forensics_custom/steganography/wanictf_tiny10px.md"
+    },
+    "MISC/binex/Binary_exploitation.md::imma dev::0": {
+      "updatedAt": "2025-12-17T20:54:16.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/Binary_exploitation.md"
+    },
+    "MISC/binex/Binary_exploitation.md::performative::0": {
+      "updatedAt": "2025-12-19T18:26:59.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/Binary_exploitation.md"
+    },
+    "MISC/binex/Binary_exploitation.md::property in manipal::0": {
+      "updatedAt": "2025-12-19T22:33:38.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/Binary_exploitation.md"
+    },
+    "MISC/binex/Binary_exploitation.md::hungry::0": {
+      "updatedAt": "2025-12-20T15:13:00.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/Binary_exploitation.md"
+    },
+    "MISC/binex/Binary_exploitation.md::iq test::0": {
+      "updatedAt": "2025-12-20T15:13:00.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/Binary_exploitation.md"
+    },
+    "MISC/binex/binex.md::precision hard pwncollege::0": {
+      "updatedAt": "2026-09-12T21:31:06.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/binex.md"
+    },
+    "MISC/binex/binex.md::control hijack hard pwncollege::0": {
+      "updatedAt": "2026-09-14T15:14:37.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/binex.md"
+    },
+    "MISC/binex/binex.md::pies hard::0": {
+      "updatedAt": "2026-09-14T15:14:37.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/binex.md"
+    },
+    "MISC/binex/binex.md::basic shellcode::0": {
+      "updatedAt": "2026-09-14T15:49:09.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/binex.md"
+    },
+    "MISC/crypto/crypto.md::shared secrets::0": {
+      "updatedAt": "2026-09-13T17:20:08.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/crypto.md"
+    },
+    "MISC/crypto/crypto.md::basic mod2::0": {
+      "updatedAt": "2026-09-13T17:20:08.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/crypto.md"
+    },
+    "MISC/crypto/crypto.md::no padding no problem::0": {
+      "updatedAt": "2026-09-14T08:25:52.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/crypto.md"
+    },
+    "MISC/crypto/crypto.md::sum o primes::0": {
+      "updatedAt": "2026-09-14T08:25:52.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/crypto.md"
+    },
+    "MISC/hardware/hardware.md::formwear::0": {
+      "updatedAt": "2025-11-29T09:41:37.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/hardware.md"
+    },
+    "MISC/hardware/hardware.md::speed thrills but kills::0": {
+      "updatedAt": "2025-11-29T17:00:58.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/hardware.md"
+    },
+    "MISC/hardware/hardware.md::red devil::0": {
+      "updatedAt": "2025-12-23T23:26:19.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/hardware.md"
+    },
+    "MISC/hardware/hardware.md::i like logic more::0": {
+      "updatedAt": "2025-12-03T15:13:38.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/hardware.md"
+    },
+    "MISC/hardware/hardware.md::gates of mayhem::0": {
+      "updatedAt": "2025-12-03T15:13:38.000Z",
+      "repository": "phase2",
+      "sourcePath": "Custom_Challenges/hardware.md"
+    },
+    "MISC/rev/rev.md::thm room windows x64 assembly::0": {
+      "updatedAt": "2026-09-14T09:43:40.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/rev.md"
+    },
+    "MISC/rev/rev.md::bit 0 asm 4::0": {
+      "updatedAt": "2026-09-14T09:43:40.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/rev.md"
+    },
+    "MISC/rev/rev.md::gatekeeper::0": {
+      "updatedAt": "2026-09-14T11:06:35.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/rev.md"
+    },
+    "MISC/rev/rev.md::perplexed::0": {
+      "updatedAt": "2026-09-14T11:06:35.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/rev.md"
+    },
+    "MISC/webex/webex.md::web gauntlet::0": {
+      "updatedAt": "2026-09-14T16:15:11.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/webex.md"
+    },
+    "MISC/webex/webex.md::ssti1::0": {
+      "updatedAt": "2026-09-14T16:15:11.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/webex.md"
+    },
+    "MISC/webex/webex.md::jauth::0": {
+      "updatedAt": "2026-09-14T16:15:11.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/webex.md"
+    },
+    "MISC/webex/webex.md::python s requests library::0": {
+      "updatedAt": "2026-09-14T16:15:11.000Z",
+      "repository": "tasks",
+      "sourcePath": "Intro-to-cybersec/webex.md"
+    },
+    "kernelCTF/06. printf Is Not Your Friend/README.md::printf is not your friend::0": {
+      "updatedAt": "2026-10-22T07:56:01.000Z",
+      "repository": "kernel",
+      "sourcePath": "06. printf Is Not Your Friend/README.md"
+    },
+    "kernelCTF/14. Apex Predator/README.md::apex predator::0": {
+      "updatedAt": "2026-10-22T07:56:01.000Z",
+      "repository": "kernel",
+      "sourcePath": "14. Apex Predator/README.md"
+    },
+    "kernelCTF/17. Turing's Mirage/README.md::turing s mirage::0": {
+      "updatedAt": "2026-10-22T07:56:01.000Z",
+      "repository": "kernel",
+      "sourcePath": "17. Turing's Mirage/README.md"
+    },
+    "niteCTF/Symmetric_starter.md::symmetric starter::0": {
+      "updatedAt": "2025-12-23T22:09:01.000Z",
+      "repository": "phase2",
+      "sourcePath": "niteCTF/Symmetric_starter.md"
+    },
+    "niteCTF/The_Flash.md::the flash osint::0": {
+      "updatedAt": "2025-12-23T20:32:54.000Z",
+      "repository": "phase2",
+      "sourcePath": "niteCTF/The_Flash.md"
+    },
+    "niteCTF/ophelias_truth_1.md::ophelia s truth 1::0": {
+      "updatedAt": "2025-12-23T22:39:32.000Z",
+      "repository": "phase2",
+      "sourcePath": "niteCTF/ophelias_truth_1.md"
+    },
+    "picoctf/Binary Exp/Binary Exp.md::buffer overflow 0::0": {
+      "updatedAt": "2025-10-27T22:07:38.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Binary Exp.md"
+    },
+    "picoctf/Binary Exp/Binary Exp.md::format string 0::0": {
+      "updatedAt": "2025-10-29T15:55:05.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Binary Exp.md"
+    },
+    "picoctf/Binary Exp/Binary Exp.md::clutter over flow::0": {
+      "updatedAt": "2025-10-29T15:55:05.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Binary Exp.md"
+    },
+    "picoctf/Cryptography/Cryptography.md::rsa oracle::0": {
+      "updatedAt": "2025-10-30T18:28:32.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Cryptography.md"
+    },
+    "picoctf/Cryptography/Cryptography.md::custom encryption::0": {
+      "updatedAt": "2025-10-30T18:28:32.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Cryptography.md"
+    },
+    "picoctf/Cryptography/Cryptography.md::minirsa::0": {
+      "updatedAt": "2025-10-30T21:08:40.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Cryptography.md"
+    },
+    "picoctf/Forensics/Forensics.md::trivial flag transfer protocol::0": {
+      "updatedAt": "2025-10-26T11:02:42.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Forensics.md"
+    },
+    "picoctf/Forensics/Forensics.md::tunn3l v1s10n::0": {
+      "updatedAt": "2025-10-29T03:10:31.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Forensics.md"
+    },
+    "picoctf/Forensics/Forensics.md::m00walk::0": {
+      "updatedAt": "2025-10-26T11:04:42.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Forensics.md"
+    },
+    "picoctf/Reverse_Engg/Reverse_Engg.md::gdb baby step 1::0": {
+      "updatedAt": "2025-10-23T23:02:36.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Reverse_Engg.md"
+    },
+    "picoctf/Reverse_Engg/Reverse_Engg.md::armssembly 1::0": {
+      "updatedAt": "2025-10-24T23:55:31.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Reverse_Engg.md"
+    },
+    "picoctf/Reverse_Engg/Reverse_Engg.md::vault door 3::0": {
+      "updatedAt": "2025-10-24T23:55:31.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Reverse_Engg.md"
+    },
+    "picoctf/Web Exp/Web Exp.md::web gauntlet::0": {
+      "updatedAt": "2025-10-29T17:34:55.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Web Exp.md"
+    },
+    "picoctf/Web Exp/Web Exp.md::ssti1::0": {
+      "updatedAt": "2025-10-27T15:31:03.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Web Exp.md"
+    },
+    "picoctf/Web Exp/Web Exp.md::cookies::0": {
+      "updatedAt": "2025-10-27T14:47:42.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/Web Exp.md"
+    },
+    "picoctf/hardware/hardware.md::iq test::0": {
+      "updatedAt": "2025-10-31T15:39:49.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/hardware.md"
+    },
+    "picoctf/hardware/hardware.md::i like logic::0": {
+      "updatedAt": "2025-10-31T14:42:31.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/hardware.md"
+    },
+    "picoctf/hardware/hardware.md::bare metal alchemist::0": {
+      "updatedAt": "2025-10-31T14:42:31.000Z",
+      "repository": "phase2",
+      "sourcePath": "picoctf/hardware.md"
+    }
+  },
+  "activity": {
+    "2025-12-31": 4,
+    "2025-12-30": 3,
+    "2025-12-29": 1,
+    "2025-12-28": 1,
+    "2025-12-26": 1,
+    "2025-12-24": 4,
+    "2025-12-22": 1,
+    "2025-12-20": 2,
+    "2025-12-19": 1,
+    "2025-12-18": 1,
+    "2025-12-16": 1,
+    "2025-12-11": 2,
+    "2025-12-10": 1,
+    "2025-12-05": 1,
+    "2025-12-04": 1,
+    "2025-12-03": 1,
+    "2025-12-02": 2,
+    "2025-12-01": 2,
+    "2025-11-29": 3,
+    "2025-11-05": 1,
+    "2025-10-31": 4,
+    "2025-10-30": 2,
+    "2025-10-29": 3,
+    "2025-10-28": 2,
+    "2025-10-27": 2,
+    "2025-10-26": 2,
+    "2025-10-25": 3,
+    "2025-10-24": 1,
+    "2025-10-23": 1,
+    "2025-10-22": 1,
+    "2026-09-14": 9,
+    "2026-09-13": 9,
+    "2026-10-22": 1
+  }
+}

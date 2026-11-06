@@ -1,0 +1,186 @@
+---
+import data from '../../.generated/writeups.json';
+import '../styles/site.css';
+
+const { items, folders, activity } = data;
+const count = items.length;
+const today = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit',
+}).format(new Date());
+const end = new Date(`${today}T00:00:00Z`);
+const start = new Date(end);
+start.setUTCDate(start.getUTCDate() - 364);
+start.setUTCDate(start.getUTCDate() - ((start.getUTCDay() + 6) % 7));
+const calendar = [];
+for (const cursor = new Date(start); cursor <= end; cursor.setUTCDate(cursor.getUTCDate() + 1)) {
+  const day = cursor.toISOString().slice(0, 10);
+  const contributions = activity[day] || 0;
+  calendar.push({ day, contributions, level: contributions === 0 ? 0 : contributions === 1 ? 1 : contributions <= 3 ? 2 : contributions <= 6 ? 3 : 4 });
+}
+const visibleCommits = calendar.reduce((sum, day) => sum + day.contributions, 0);
+const dateLabel = (value: string) => new Intl.DateTimeFormat('en-US', {
+  timeZone: 'Asia/Kolkata', month: 'short', day: 'numeric', year: 'numeric',
+}).format(new Date(value));
+const folderItems = (folder: string) => items.filter((item) => item.folder === folder);
+const folderContents = (folder: string) => {
+  const direct: typeof items = [];
+  const nested = new Map<string, typeof items>();
+  for (const item of folderItems(folder)) {
+    const directory = item.path.split('/').slice(1, -1).join('/');
+    if (!directory) direct.push(item);
+    else nested.set(directory, [...(nested.get(directory) || []), item]);
+  }
+  return { direct, nested: [...nested].sort(([a], [b]) => a.localeCompare(b)) };
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1210" />
+    <meta name="description" content="Aditya's CTF writeups, notes, and challenge solutions." />
+    <title>CTF Writeups · Aditya</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Writeup folders">
+        <div class="sidebar-top">
+          <div class="brand"><a class="brand-mark" href="#top" aria-label="Back to top">&gt;_</a><span><a class="brand-person" href="http://1-4m-5p33d.github.io/">ADITYA</a><span class="brand-muted">/CTF</span></span></div>
+          <p class="sidebar-kicker">INDEX</p>
+        </div>
+        <nav class="folder-list" aria-label="Browse writeups by folder">
+          {folders.map((folder) => (
+            <details class="folder">
+              <summary><span class="folder-chevron">⌄</span><span>{folder}</span><span class="folder-count">{folderItems(folder).length}</span></summary>
+              <ul>
+                {folderContents(folder).direct.map((item) => (
+                  <li><a href={`#entry-${item.id}`} title={item.path}>{item.title}</a></li>
+                ))}
+                {folderContents(folder).nested.map(([directory, entries]) => (
+                  <li><details class="subfolder">
+                    <summary><span class="folder-chevron">⌄</span><span>{directory}</span><span class="folder-count">{entries.length}</span></summary>
+                    <ul>{entries.map((item) => <li><a href={`#entry-${item.id}`} title={item.path}>{item.title}</a></li>)}</ul>
+                  </details></li>
+                ))}
+              </ul>
+            </details>
+          ))}
+        </nav>
+      </aside>
+
+      <main id="top">
+        <div class="main-content">
+          <section class="hero" aria-labelledby="hero-title">
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar">Browse folders <span>☰</span></button>
+            <div class="eyebrow"><span class="eyebrow-line"></span> PERSONAL CTF ARCHIVE</div>
+            <h1 id="hero-title">The <em>writeups.</em></h1>
+            <div class="hero-stats"><span><strong>{count}</strong> WRITEUPS</span><span><strong>{folders.length}</strong> FOLDERS</span><span><strong>{visibleCommits}</strong> COMMITS THIS YEAR</span></div>
+          </section>
+
+          <section class="activity-panel" aria-labelledby="activity-title">
+            <div class="section-head"><div><p class="section-kicker">01 / SIGNAL</p><h2 id="activity-title">Activity</h2></div><span class="section-note">Writeup commits · last 12 months</span></div>
+            <div class="calendar-scroll"><div class="calendar-wrap"><div class="weekday-labels"><span>Mon</span><span>Wed</span><span>Fri</span></div><div class="calendar-grid" aria-label="Writeup commit activity over the last year">{calendar.map((day) => <span class={`calendar-day level-${day.level}`} title={`${day.day}: ${day.contributions} writeup commit${day.contributions === 1 ? '' : 's'}`} aria-label={`${day.day}: ${day.contributions} writeup commits`}></span>)}</div></div></div>
+            <div class="calendar-footer"><span>Each square is one day. Darker green means more commits.</span><div class="legend" aria-hidden="true"><span>Less</span>{[0,1,2,3,4].map((level) => <i class={`level-${level}`}></i>)}<span>More</span></div></div>
+          </section>
+
+          <section class="feed" aria-labelledby="feed-title">
+            <div class="section-head"><div><p class="section-kicker">02 / ARCHIVE</p><h2 id="feed-title">Latest writeups</h2></div><span class="section-note">Sorted by last update ↓</span></div>
+            <div class="feed-list">
+              {items.map((item, index) => (
+                <details class="writeup" id={`entry-${item.id}`}>
+                  <summary>
+                    <span class="entry-index">{String(index + 1).padStart(2, '0')}</span>
+                    <span class="entry-body"><span class="entry-path">/{item.path}</span><span class="entry-title">{item.title}</span><span class="entry-excerpt">{item.excerpt || 'Open the challenge notes and solution.'}</span><span class="entry-meta"><span class="entry-folder">{item.folder}</span><time datetime={item.updatedAt}>Updated {dateLabel(item.updatedAt)}</time></span></span>
+                    <span class="entry-arrow" aria-hidden="true">↗</span>
+                  </summary>
+                  <div class="writeup-panel">
+                    {item.filesUrl && <div class="writeup-actions"><a class="files-link" href={item.filesUrl} target="_blank" rel="noopener noreferrer" aria-label={`Open the folder for ${item.title} on GitHub`} title="Open the exact folder on GitHub"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10H3z"/><path d="M3 9h18"/></svg><span class="files-link-label">Open folder on GitHub ↗</span></a></div>}
+                    <div class="writeup-content" set:html={item.html} />
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+          <footer><span>&gt; END OF ARCHIVE</span><a href="#top">BACK TO TOP ↑</a></footer>
+        </div>
+      </main>
+    </div>
+    <script>
+      const button = document.querySelector<HTMLButtonElement>('#menu-toggle');
+      const sidebar = document.querySelector<HTMLElement>('#sidebar');
+      button?.addEventListener('click', () => {
+        const open = sidebar?.classList.toggle('is-open') || false;
+        button.setAttribute('aria-expanded', String(open));
+      });
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let selection = 0;
+
+      function waitForScroll() {
+        return new Promise<void>((resolve) => {
+          const started = performance.now();
+          let previous = window.scrollY;
+          let stillFrames = 0;
+          const check = () => {
+            const current = window.scrollY;
+            stillFrames = Math.abs(current - previous) < 1 ? stillFrames + 1 : 0;
+            previous = current;
+            if ((performance.now() - started > 180 && stillFrames >= 6) || performance.now() - started > 1600) resolve();
+            else requestAnimationFrame(check);
+          };
+          requestAnimationFrame(check);
+        });
+      }
+
+      function expandWriteup(target: HTMLDetailsElement) {
+        if (target.open) return;
+        const panel = target.querySelector<HTMLElement>('.writeup-panel');
+        if (!panel || reducedMotion.matches) {
+          target.open = true;
+          return;
+        }
+        panel.style.height = '0px';
+        panel.style.opacity = '0';
+        target.open = true;
+        const height = panel.scrollHeight;
+        const animation = panel.animate(
+          [{ height: '0px', opacity: 0 }, { height: `${height}px`, opacity: 1 }],
+          { duration: 520, easing: 'cubic-bezier(.22,.75,.25,1)' },
+        );
+        const clearStyles = () => {
+          panel.style.height = '';
+          panel.style.opacity = '';
+        };
+        animation.finished.then(clearStyles, clearStyles);
+      }
+
+      sidebar?.querySelectorAll<HTMLAnchorElement>('nav a').forEach((link) => link.addEventListener('click', async (event) => {
+        const href = link.getAttribute('href');
+        const target = href ? document.getElementById(href.slice(1)) as HTMLDetailsElement | null : null;
+        if (!href || !target) return;
+        event.preventDefault();
+        const currentSelection = ++selection;
+        sidebar.classList.remove('is-open');
+        button?.setAttribute('aria-expanded', 'false');
+        history.replaceState(null, '', href);
+        target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+        if (!reducedMotion.matches) await waitForScroll();
+        if (currentSelection !== selection) return;
+        if (!reducedMotion.matches) {
+          target.classList.remove('is-spotlit');
+          void target.offsetWidth;
+          target.classList.add('is-spotlit');
+          window.setTimeout(() => target.classList.remove('is-spotlit'), 1500);
+          await new Promise((resolve) => window.setTimeout(resolve, 260));
+        }
+        if (currentSelection !== selection) return;
+        expandWriteup(target);
+        target.querySelector<HTMLElement>('summary')?.focus({ preventScroll: true });
+      }));
+
+      const linkedWriteup = location.hash ? document.getElementById(location.hash.slice(1)) as HTMLDetailsElement | null : null;
+      if (linkedWriteup?.matches('details.writeup')) linkedWriteup.open = true;
+    </script>
+  </body>
+</html>
