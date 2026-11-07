@@ -16,3 +16,5 @@ The checked-in `history/legacy.json` preserves dates from the three original rep
 ## Publish
 
 Push this repository to GitHub and set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**. The workflow builds and deploys after pushes to `master` or `main`. It uses the repository name for the GitHub Pages base path and fetches full Git history so future writeup edits update dates and activity.
+
+If the deploy job reports `Failed to create deployment (status: 404)`, enable Pages using that setting before running the workflow again. The workflow gives each attempt its own artifact name, so rerunning a failed deployment does not select an artifact from an earlier attempt.
